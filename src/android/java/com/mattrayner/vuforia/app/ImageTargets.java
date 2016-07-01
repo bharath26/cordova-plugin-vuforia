@@ -418,9 +418,7 @@ public class ImageTargets extends Activity implements ApplicationControl
 
         // If the message doesn't exist/is empty, set the black overlay container to be nearly transparent.
         LinearLayout overlayContainer = (LinearLayout) mUILayout.findViewById(resources.getIdentifier("layout_top", "id", package_name));
-        if(overlayText != null || !overlayText.getText().equals("")) {
-            Log.e(LOGTAG, "OMG WE MADE IT");
-            // Hide the close button if needed
+        if(overlayText != null || overlayText.getText().equals("")) {
             overlayContainer.setBackgroundColor(Color.parseColor("#0D000000"));
         }
 
